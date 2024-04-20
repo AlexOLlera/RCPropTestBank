@@ -845,3 +845,4 @@ if __name__ == '__main__':          # Sección principal del código en donde se
     ui.show()
     app.exec_()
     
+# Git State Test
