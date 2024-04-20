@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>272</width>
+    <height>613</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Sampler</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="1" column="0">
+     <widget class="QLabel" name="PeriodLabel">
+      <property name="text">
+       <string>Time per step: </string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0" colspan="2">
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="StepLabel">
+        <property name="text">
+         <string>Number of Steps:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="sampleNumberText">
+        <property name="placeholderText">
+         <string>0</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="4" column="0" colspan="2">
+     <widget class="QTextEdit" name="textEdit">
+      <property name="readOnly">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0" colspan="2">
+     <widget class="QSlider" name="rpmSlider">
+      <property name="minimum">
+       <number>0</number>
+      </property>
+      <property name="maximum">
+       <number>100</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="tickPosition">
+       <enum>QSlider::TicksBelow</enum>
+      </property>
+      <property name="tickInterval">
+       <number>10</number>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="samplePeriodText">
+      <property name="inputMask">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="cursorPosition">
+       <number>0</number>
+      </property>
+      <property name="placeholderText">
+       <string>0</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>272</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionExport"/>
+   </widget>
+   <widget class="QMenu" name="menuMode">
+    <property name="title">
+     <string>Mode</string>
+    </property>
+    <addaction name="actionSweep_2"/>
+    <addaction name="actionPeriod"/>
+    <addaction name="actionResponse_Test"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuMode"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionCheckCom"/>
+   <addaction name="actionReset"/>
+   <addaction name="actionPlot"/>
+   <addaction name="separator"/>
+   <addaction name="actionRunSweep"/>
+   <addaction name="actionStopSweep"/>
+   <addaction name="separator"/>
+   <addaction name="actionRunPeriod"/>
+  </widget>
+  <action name="actionExport">
+   <property name="text">
+    <string>Export</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+E</string>
+   </property>
+  </action>
+  <action name="actionSweep">
+   <property name="text">
+    <string>Sweep</string>
+   </property>
+   <property name="shortcut">
+    <string>F1</string>
+   </property>
+  </action>
+  <action name="actionInstant">
+   <property name="text">
+    <string>Instant</string>
+   </property>
+   <property name="shortcut">
+    <string>F2</string>
+   </property>
+  </action>
+  <action name="actionSweep_2">
+   <property name="text">
+    <string>Sweep</string>
+   </property>
+  </action>
+  <action name="actionPeriod">
+   <property name="text">
+    <string>Period</string>
+   </property>
+  </action>
+  <action name="actionReset">
+   <property name="icon">
+    <iconset resource="Sampler.qrc">
+     <normaloff>:/ToolBar/icons8-record-64.png</normaloff>:/ToolBar/icons8-record-64.png</iconset>
+   </property>
+   <property name="text">
+    <string>R</string>
+   </property>
+   <property name="toolTip">
+    <string>Reset</string>
+   </property>
+  </action>
+  <action name="actionCheckCom">
+   <property name="icon">
+    <iconset resource="Sampler.qrc">
+     <normaloff>:/ToolBar/icons8-repeat-64.png</normaloff>:/ToolBar/icons8-repeat-64.png</iconset>
+   </property>
+   <property name="text">
+    <string>CC</string>
+   </property>
+   <property name="toolTip">
+    <string>Check connection</string>
+   </property>
+  </action>
+  <action name="actionRunSweep">
+   <property name="icon">
+    <iconset resource="Sampler.qrc">
+     <normaloff>:/ToolBar/icons8-play-64.png</normaloff>:/ToolBar/icons8-play-64.png</iconset>
+   </property>
+   <property name="text">
+    <string>RS</string>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Run Sweep&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </action>
+  <action name="actionStopSweep">
+   <property name="icon">
+    <iconset resource="Sampler.qrc">
+     <normaloff>:/ToolBar/icons8-pause-64.png</normaloff>:/ToolBar/icons8-pause-64.png</iconset>
+   </property>
+   <property name="text">
+    <string>SS</string>
+   </property>
+   <property name="toolTip">
+    <string>Stop sweep</string>
+   </property>
+  </action>
+  <action name="actionRunPeriod">
+   <property name="icon">
+    <iconset resource="Sampler.qrc">
+     <normaloff>:/ToolBar/icons8-end-64.png</normaloff>:/ToolBar/icons8-end-64.png</iconset>
+   </property>
+   <property name="text">
+    <string>RP</string>
+   </property>
+   <property name="toolTip">
+    <string>Run period</string>
+   </property>
+  </action>
+  <action name="actionPlot">
+   <property name="icon">
+    <iconset resource="Sampler.qrc">
+     <normaloff>:/ToolBar/icons8-graph-48.png</normaloff>:/ToolBar/icons8-graph-48.png</iconset>
+   </property>
+   <property name="text">
+    <string>PP</string>
+   </property>
+   <property name="toolTip">
+    <string>Enable data plot</string>
+   </property>
+  </action>
+  <action name="actionResponse_Test">
+   <property name="text">
+    <string>Response Test</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="Sampler.qrc"/>
+ </resources>
+ <connections/>
+</ui>
