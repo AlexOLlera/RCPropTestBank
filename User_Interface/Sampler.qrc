@@ -1,0 +1,11 @@
+<RCC>
+  <qresource prefix="ToolBar">
+    <file>icons8-repeat-64.png</file>
+    <file>icons8-record-64.png</file>
+    <file>icons8-play-64.png</file>
+    <file>icons8-pause-64.png</file>
+    <file>icons8-graph-64.png</file>
+    <file>icons8-graph-48.png</file>
+    <file>icons8-end-64.png</file>
+  </qresource>
+</RCC>
